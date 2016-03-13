@@ -1,7 +1,7 @@
 window.addEventListener ("load", myMain, false);
 
 function getArray() {
-	var array = ['Donald', 'Trump', 'donald', 'trump', 'Rubio', 'Cruz', 'Hillary', 'Clinton', 'Bernie', 'Primary', 'primary', 'Primaries', 'primaries', 'Democrat', 'democrat', 'Republican', 'republican', 'Delegate', 'delegate', 'Democratic', 'democratic', 'Election', 'election', 'Caucus', 'caucus', 'Candidate', 'candidate', 'Politics', 'politics']
+	var array = ['donald', 'trump', 'rubio', 'cruz', 'hillary', 'clinton', 'bernie', 'primary', 'primaries', 'democrat', 'republican', 'delegate', 'democratic', 'election', 'caucus', 'candidate', 'politics']
 	return array;
 }
 
@@ -13,10 +13,10 @@ function replaceElements() {
 		regex += array[index] + "|";
 	}
 	regex = regex.substring(0, regex.length - 1);
-	var matcher = new RegExp(regex, 'g');
+	var matcher = new RegExp(regex, 'ig');
 	document.body.innerHTML = document.body.innerHTML.replace(matcher, replacement);
 }
 
 function myMain (evt) {
-	setInterval(replaceElements, 5000);
+	setInterval(replaceElements, 3000);
 }
